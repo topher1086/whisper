@@ -34,8 +34,11 @@ setup(
             Path(__file__).with_name("requirements.txt").open()
         )
     ],
-    entry_points={
-        "console_scripts": ["whisper=whisper.transcribe:cli"],
+    entry_points = {
+        'console_scripts': [
+            'whisper=whisper.transcribe:cli',
+            'whisper-download=whisper.download:cli',
+        ],
     },
     include_package_data=True,
     extras_require={"dev": ["pytest", "scipy", "black", "flake8", "isort"]},
